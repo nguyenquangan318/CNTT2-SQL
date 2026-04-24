@@ -8,3 +8,10 @@ CREATE TABLE orders(
     user_id INT,
     `status` varchar(10)
 );
+
+SELECT * from orders
+where total_amount between 4000000 and 5000000
+and status <> 'cancelled'
+and (note like '%gấp%' or user_id IS NULL);
+
+
